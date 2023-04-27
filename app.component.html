@@ -1,0 +1,26 @@
+
+<table class="table">
+  <div>
+    <input type="text" [(ngModel)]="Search"/>
+  </div>
+  <thead >
+    <tr>
+      <th> Name</th>
+      <th> city</th>
+      <th > state</th>
+      <th > pincode</th>
+      <th> MobileNum</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let tasklists of tasklist | filter :Search">
+      <td scope="col">{{tasklists.Name}}</td>
+      <td scope="col">{{tasklists.city}}</td>
+      <td scope="col">{{tasklists.state}}</td>
+      <td scope="col">{{tasklists.pincode}}</td>
+      <td scope="col">{{tasklists.MobileNum}}</td>
+
+    </tr>
+  </tbody>
+</table>
